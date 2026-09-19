@@ -1,0 +1,15 @@
+name: CI
+
+on:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+      - name: Show demo output
+        run: |
+          echo "Running demo CI for the onboarding walkthrough."
+          echo "Checkout and echo steps completed successfully."
